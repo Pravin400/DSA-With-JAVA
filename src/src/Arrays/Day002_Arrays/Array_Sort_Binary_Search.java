@@ -1,0 +1,72 @@
+package Arrays.Day002_Arrays;
+
+public class Array_Sort_Binary_Search {
+    public static void main(String[] args) {
+
+        // Sorted array (required for binary search)
+        int[] number = {3, 16,60,69,13,4, 5,88, 6, 8, 10, 45,15, 20, 42, 54, 56, 66, 90};
+        System.out.println("Array Before Sorting : ");
+        display(number);
+        System.out.println("\nArray Sorting .....");
+        System.out.println("\nProcessing .....");
+        sorting(number);
+        System.out.println("Array Sorted ..");
+        display(number);
+
+        int keyy = 54;  // Key to search
+        int founded = binarySearch(number, keyy);
+
+        if (founded != -1) {
+            System.out.println(keyy + " Key At index : " + founded);
+        } else {
+            System.out.println("Key Not in the array ");
+        }
+    }
+
+    // 🔍 Binary Search Method (Iterative)
+    public static int binarySearch(int number[], int key) {
+        int start = 0;
+        int end = number.length - 1;
+
+        // Loop until the search space is exhausted
+        while (start <= end) {
+            // Prevents overflow compared to (start + end) / 2
+            int mid = start + (end - start) / 2;
+
+            if (number[mid] == key) {
+                System.out.println();
+                System.out.println("\nKey Found At The Index : " + mid);
+                return mid;
+            } else if (key > number[mid]) {
+                start = mid + 1; // Search in right half
+            } else {
+                end = mid - 1; // Search in left half
+            }
+        }
+
+        return -1; // Key not found
+    }
+
+    public static void sorting(int [] number){
+        int n = number.length;
+        for (int i = 0;i<n-1;i++){
+            boolean swapped = false;
+            for(int j = 0;j<n-1-i;j++){
+                if(number[j]>number[j+1]){
+                    int temp = number[j];
+                    number[j]= number[j+1];
+                    number[j+1]= temp;
+                swapped=true;
+                }
+            }
+            if(!swapped) break;;
+        }
+
+    }
+
+    public static void display(int [] number){
+        for(int num : number){
+            System.out.print(num+" ");
+        }
+    }
+}
