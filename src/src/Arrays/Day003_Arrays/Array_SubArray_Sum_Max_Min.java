@@ -16,8 +16,8 @@ public class Array_SubArray_Sum_Max_Min {
 
     // Find minimum subarray sum
     private static void minimum(int[] subArraySum) {
-        int min = subArraySum[0];
-        for (int i = 1; i < subArraySum.length; i++) {
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < subArraySum.length; i++) {
             if (subArraySum[i] < min) {
                 min = subArraySum[i];
             }
@@ -27,8 +27,8 @@ public class Array_SubArray_Sum_Max_Min {
 
     // Find maximum subarray sum
     private static void maximum(int[] subArraySum) {
-        int max = subArraySum[0];
-        for (int i = 1; i < subArraySum.length; i++) {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < subArraySum.length; i++) {
             if (subArraySum[i] > max) {
                 max = subArraySum[i];
             }
