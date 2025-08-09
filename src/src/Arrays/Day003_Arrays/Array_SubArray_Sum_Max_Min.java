@@ -12,7 +12,7 @@ public class Array_SubArray_Sum_Max_Min {
 
     public static void main(String[] args) {
         // Input array
-        int[] number = {2, 3, 4, 5, 6, 7, 8};
+        int[] number = {2,4,6,8,10};
 
         // Array to store subarray sums
         int[] subArray_Sum = new int[(number.length * (number.length + 1) / 2)];
