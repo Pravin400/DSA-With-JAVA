@@ -1,4 +1,4 @@
-package Arrays.Day004_Array;
+package Arrays.Day004_ArraysExample;
 
 public class Array_TappingWater_Problem {
 
