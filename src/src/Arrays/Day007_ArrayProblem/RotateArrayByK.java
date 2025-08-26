@@ -1,34 +1,31 @@
 package Arrays.Day007_ArrayProblem;
 
-import java.util.Arrays;
+import java.util.HashSet;
 
-public class RotateArrayByK {
+public class FindDuplicate {
     public static void main(String[] args) {
-        int [] num = {1,2,3,4,5,6,7,8,9,10};
-        int k = 3;
-        Rotate(num,k);
-        System.out.println("Rotated Array: " + Arrays.toString(num));
+        int[] numbers = {1, 3, 4, 2, 2};
 
-    }
+        int duplicate = findDuplicate(numbers);
 
-    private static void Rotate(int[] num,int k) {
-        int n = num.length;
-        k = k % n;
-
-        reverse(num,0,n-1);
-        reverse(num,0,k-1);
-        reverse(num,k,n-1);
-
-
-
-    }
-    private static void reverse(int[] nums, int start, int end) {
-        while (start < end) {
-            int temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
-            start++;
-            end--;
+        if (duplicate != -1) {
+            System.out.println("Duplicate number is: " + duplicate);
+        } else {
+            System.out.println("No duplicates found");
         }
+    }
+
+    // Optimized solution using HashSet
+    private static int findDuplicate(int[] numbers) {
+        HashSet<Integer> seen = new HashSet<>();
+
+        for (int num : numbers) {
+            if (seen.contains(num)) {
+                return num; // Found duplicate
+            }
+            seen.add(num);
+        }
+
+        return -1; // No duplicate found
     }
 }
