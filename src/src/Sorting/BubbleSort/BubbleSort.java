@@ -8,7 +8,7 @@ public class BubbleSort {
         bubblesort(number);
         bubblesort1(number);
     }
-
+//high time complexity
     private static void bubblesort1(int[] number) {
         for (int i = 0; i < number.length - 1; i++) {
             for (int j = 0; j < number.length - i - 1; j++) {
@@ -23,6 +23,7 @@ public class BubbleSort {
             System.out.println(Arrays.toString(number));
     }
 
+    //low time complexity
     private static void bubblesort(int[] number) {
         for (int i = 0; i < number.length - 1; i++) {
             for (int j = 0; j < number.length-1; j++) {
