@@ -1,12 +1,5 @@
-Got it 👍
-You want a **complete Markdown (`.md`) file** explaining **all inbuilt Java sorting methods** without missing any feature.
-In Java, sorting is mostly provided through **`Arrays`** and **`Collections`** classes.
 
-Here’s the **full `.md` file**:
-
----
-
-# 🟢 Java Inbuilt Sorting Methods (Full Guide)
+# 🟢 Java Inbuilt Sorting Methods 
 
 Java provides powerful **inbuilt sorting methods** in `java.util.Arrays` (for arrays) and `java.util.Collections` (for lists/collections). These are optimized and widely used in real-world applications.
 
@@ -214,7 +207,3 @@ public class StreamSortExample {
 * Use `Stream.sorted()` for **functional style sorting**.
 
 ---
-
-✅ This `.md` covers **all Java inbuilt sorting methods** without missing anything.
-
-Do you also want me to **add real-life use cases (e.g., sorting students by marks, employees by salary)** into this MD so it becomes more practical for projects?
