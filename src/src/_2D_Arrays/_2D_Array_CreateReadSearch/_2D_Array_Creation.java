@@ -1,4 +1,4 @@
-package _2D_Arrays;
+package _2D_Arrays._2D_Array_CreateReadSearch;
 
 import java.util.Scanner;
 
