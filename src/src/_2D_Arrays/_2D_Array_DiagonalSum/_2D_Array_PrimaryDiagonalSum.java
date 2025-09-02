@@ -5,9 +5,10 @@ import java.util.Arrays;
 public class _2D_Array_PrimaryDiagonalSum {
     public static void main(String[] args) {
         int[][] matrix = {
-                {1,2,3},
-                {4,5,6},
-                {7,8,9}
+                {1,2,3,10},
+                {4,5,6,11},
+                {7,8,9,12},
+                {13,14,15,16}
         };
         diagonalSum(matrix);
     }
