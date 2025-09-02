@@ -1,63 +1,58 @@
 package _2D_Arrays._2d_SpiralMatrix;
 
-
-import java.util.Scanner;
-
 public class _2d_SpiralMatrixCreate {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int [][] matrix = {{1,2,3,4},
+                           {5,6,7,8},
+                           {9,10,11,12},
+                           {13,14,15,16}
+                           };
+        printSpiralArray(matrix);
 
-        System.out.print("Enter number of rows: ");
-        int rows = sc.nextInt();
-
-        System.out.print("Enter number of columns: ");
-        int cols = sc.nextInt();
-
-        int[][] matrix = new int[rows][cols];
-
-        System.out.println("Enter the elements row-wise:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = sc.nextInt();
-            }
-        }
-
-        System.out.println("Spiral Order:");
-        printSpiral(matrix, rows, cols);
     }
 
-    public static void printSpiral(int[][] matrix, int rows, int cols) {
-        int top = 0, bottom = rows - 1;
-        int left = 0, right = cols - 1;
+    public static void printSpiralArray(int[][] matrix) {
+        int startRow = 0;
+        int startCol = 0;
+        int endRow = matrix.length-1;
+        int endCol = matrix[0].length-1;
 
-        while (top <= bottom && left <= right) {
-            // Print top row
-            for (int i = left; i <= right; i++) {
-                System.out.print(matrix[top][i] + " ");
+        while (startRow <= endRow && startCol <= endCol) {
+
+            //top
+            for(int j = startCol; j <= endCol; j++) {
+                //row constant col increase
+                System.out.print(matrix[startRow][j]+" ");
             }
-            top++;
 
-            // Print right column
-            for (int i = top; i <= bottom; i++) {
-                System.out.print(matrix[i][right] + " ");
+            //right
+            for(int i =  startRow+1; i <= endRow; i++) {
+                //col constant row increases
+                System.out.print(matrix[i][endCol]+" ");
             }
-            right--;
 
-            // Print bottom row (if any)
-            if (top <= bottom) {
-                for (int i = right; i >= left; i--) {
-                    System.out.print(matrix[bottom][i] + " ");
+            //bottom
+            for(int j = endCol-1 ; j >= startCol; j--) {
+                if(startCol  == endCol) {
+                    break;
                 }
-                bottom--;
+                //row constant col decrease
+
+                System.out.print(matrix[endRow][j]+" ");
             }
 
-            // Print left column (if any)
-            if (left <= right) {
-                for (int i = bottom; i >= top; i--) {
-                    System.out.print(matrix[i][left] + " ");
+            //left
+            for(int j = endRow-1 ; j >= startRow+1; j--) {
+                //col constant row decreases
+                if(startCol  == endCol) {
+                    break;
                 }
-                left++;
+                System.out.print(matrix[j][startCol ]+" ");
             }
+            startRow++;
+            startCol++;
+            endRow--;
+            endCol--;
         }
         System.out.println();
     }
