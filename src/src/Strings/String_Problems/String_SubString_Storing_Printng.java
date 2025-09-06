@@ -8,7 +8,10 @@ public class String_SubString_Storing_Printng {
 
     int start = 0;
     int end = 5;
+        //with created function
         System.out.println(substring(str,start,end));
+        //with in build function
+        System.out.println(str.substring(start,end));
     }
     public static String substring(String str,int start,int end){
         String substring = "";
