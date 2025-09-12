@@ -8,8 +8,9 @@
 * **Quick Sort** is a sorting algorithm that uses the **Divide and Conquer** strategy.
 * It sorts an array by picking a **pivot** element, partitioning the array around the pivot so that smaller elements go to the left and larger to the right, then sorting the left and right parts recursively.
 * Quick Sort is usually **in-place** (needs little extra memory) and is typically **fast in practice**.
-
-**Analogy:**
+* **Worst Case Complexity** for **Time O(n²)** & for **Space O(n)** 
+* **Average/Best Complexities** for **time O(n log n)** & for **Space O(log n)** .
+* **Analogy:**
 Think of organizing books on a shelf: pick one book as a reference (pivot). Put all thinner books to the left and thicker books to the right, then repeat the same process for the left pile and the right pile.
 
 ---
