@@ -66,12 +66,15 @@ public class LL_Size {
     }
 
     public static void main(String[] args) {
-        addLast(10);
-        addLast(20);
-        addLast(30);
-        addLast(50);
+        LL_Size ll=new LL_Size();
+        ll.addLast(10);
+        ll.addLast(20);
+        ll.addLast(30);
+        ll.addLast(50);
         print();
-        addMiddle(40,0);
+        ll.addMiddle(40,0);
         print();
+        System.out.println("Size of the linked list : "+ll.size);
+
     }
 }
