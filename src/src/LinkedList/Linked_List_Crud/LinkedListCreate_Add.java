@@ -19,22 +19,39 @@ public class LinkedListCreate_Add {
         //when node is empty
         if(head==null){
             head= tail = newNode;
+            System.out.println(head.data);
+            System.out.println(tail.data);
             return;
         }
         //2 new node assign to the head
         newNode.next=head;//newnode stores the address of the next head
         //3 head = newNode
         head=newNode;
+        System.out.println(newNode.data);
+        System.out.println(newNode.next.data);
+        System.out.println(head.data);
+        System.out.println(tail.data);
     }
 
     public static void addLast(int data){
+        Node newNode = new Node(data);
+        if(tail==null){
+            head = tail=newNode;
+        }
+        tail.next=newNode;
+        tail=newNode;
+        System.out.println(newNode.data);
+        System.out.println(tail.data);
 
+        System.out.println(head.data);
+        System.out.println(tail.data);
     }
     public static void printlist(){
         Node temp = head;
         while(temp!=null){
             System.out.print(temp.data+" -> ");
             temp=temp.next;
+
         }
         System.out.println("null");
     }
@@ -44,6 +61,8 @@ public class LinkedListCreate_Add {
         addFirst(1);
         addFirst(2);
         addFirst(3);
+        addLast(4);
+        addLast(5);
         printlist();
     }
 }
