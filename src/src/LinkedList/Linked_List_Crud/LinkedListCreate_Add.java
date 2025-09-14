@@ -57,12 +57,12 @@ public class LinkedListCreate_Add {
     }
 
     public static void main(String[] args) {
-        LinkedListCreate_Add obj = new LinkedListCreate_Add();
-        addFirst(1);
-        addFirst(2);
-        addFirst(3);
-        addLast(4);
-        addLast(5);
+        LinkedListCreate_Add ll = new LinkedListCreate_Add();
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ll.addFirst(3);
+        ll.addLast(4);
+        ll.addLast(5);
         printlist();
     }
 }
