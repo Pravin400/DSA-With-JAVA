@@ -78,7 +78,7 @@ public class LL_Remove_Last {
         ll.removeLast();
         printlist();
 
-        System.out.println("Size Of the  LL is : "+ll.siz e);
+        System.out.println("Size Of the  LL is : "+ll.size);
         System.out.println("Removing the Last  Element......");
         ll.removeLast();
         printlist();
