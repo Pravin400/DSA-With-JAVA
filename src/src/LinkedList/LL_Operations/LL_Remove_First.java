@@ -32,12 +32,14 @@ public class LL_Remove_First {
         } else if (size == 1) {
             int val = head.data;
             head = tail =null;
+            System.out.println("Element Removed Successfully");
             System.out.println("Now the The List is empty");
             size--;
             return val;
         }
         int val = head.data;
         head = head.next;
+            System.out.println("Element Removed Successfully");
         size--;
         return val;
 
@@ -58,14 +60,14 @@ public class LL_Remove_First {
         printlist();
         System.out.println("Size Of the  LL is : "+ll.size);
         ll.add(1);
-//        ll.add(2);
-//        ll.add(3);
-//        ll.add(4);
+        ll.add(2);
+        ll.add(3);
+        ll.add(4);
 
         printlist();
         System.out.println("Size Of the  LL is : "+ll.size);
-        System.out.println();
-        System.out.println("Removing the First Element......"+ll.removeFirst()+"st Element Removed");
+        System.out.println("Removing the First Element......");
+        ll.removeFirst();
         System.out.println("Size Of the  LL is : "+ll.size);
 
         printlist();
