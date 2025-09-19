@@ -21,25 +21,26 @@ public class LL_Palindrome {
         Node newNode = new Node(data);
         if (head == null) {
             head = tail = newNode;
-            size++;
+        }else {
+            tail.next = newNode;
+            tail = newNode;
         }
-        tail.next = newNode;
-        tail = newNode;
         size++;
     }
 
     public Node midnode(Node head) {
         Node slow = head;
         Node fast  = head;
-        if(fast.next != null && fast != null){
+        while (fast.next != null && fast != null){
         slow = slow.next;//+1
         fast = fast.next.next;//+2
         }
+        System.out.println("slow"+slow.data);
         return slow;
     }
 
     public  boolean isPalindrome() {
-        if(head == null || head.next != null){//linkedlist is either empty or having one element
+        if(head == null || head.next == null){//linkedlist is either empty or having one element
             return true;
         }
         //1.find mid
@@ -48,7 +49,7 @@ public class LL_Palindrome {
         Node prev = null;
         Node curr = mid;
         Node next ;
-        //3.check left & right half
+        //3.reverse 2nd half
         while(curr != null){
             next = curr.next;
             curr.next = prev;
@@ -57,6 +58,7 @@ public class LL_Palindrome {
         }
         Node right = prev;
         Node left = head;
+        //if right and left part comparision
         while(right != null){
             if(left.data != right.data){
                 return false;
@@ -81,11 +83,13 @@ public class LL_Palindrome {
         ll.addNode(1);
         ll.addNode(2);
         ll.addNode(3);
+        ll.addNode(4);
+        ll.addNode(3);
         ll.addNode(2);
         ll.addNode(1);
         ll.printList();
-        ll.isPalindrome();
-        ll.printList();
+        System.out.println("is this palindrome : " + ll.isPalindrome());
+
     }
 
 }
