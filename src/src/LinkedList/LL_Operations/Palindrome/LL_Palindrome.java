@@ -1,4 +1,4 @@
-package LinkedList.LL_Operations;
+package LinkedList.LL_Operations.Palindrome;
 
 //{1,2,3,2,1}
 public class LL_Palindrome {
@@ -35,7 +35,7 @@ public class LL_Palindrome {
         slow = slow.next;//+1
         fast = fast.next.next;//+2
         }
-        System.out.println("slow"+slow.data);
+        System.out.println("slow : "+slow.data);
         return slow;
     }
 
