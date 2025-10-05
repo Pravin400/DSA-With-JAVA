@@ -144,4 +144,77 @@ After `removeLast()`:
 * Requires **extra memory** (for `prev` pointer).
 * Operations take **slightly more time** (two pointers to update).
 
+# Doubly Linked List (DLL) — Reverse Operation
+
+## 1. What is Reversing a Doubly Linked List?
+
+Reversing a **Doubly Linked List (DLL)** means changing the direction of traversal so that:
+
+* The **head becomes the tail**.
+* The **tail becomes the head**.
+* For every node:
+
+    * The `next` pointer becomes the `prev`.
+    * The `prev` pointer becomes the `next`.
+
+---
+
+## 2. Steps for Reversing a DLL
+
+1. Start with `curr = head`, `prev = null`.
+2. Traverse the list:
+
+    * Store `next = curr.next`.
+    * Swap the links:
+
+        * `curr.next = prev`
+        * `curr.prev = next`
+    * Move `prev = curr`, `curr = next`.
+3. After traversal, set `head = prev`.
+
+---
+
+## 3. Visualization (add an image here)
+
+👉 *Insert an image showing how each node’s `prev` and `next` pointers are swapped.*
+
+---
+
+## 4. Example Execution
+
+Suppose we have the DLL:
+
+```
+0 <-> 1 <-> 2 <-> 3 <-> null
+```
+
+* Iteration 1: Node `0` → links swapped, points backward.
+* Iteration 2: Node `1` → points backward to `0`.
+* Iteration 3: Node `2` → points backward to `1`.
+* Iteration 4: Node `3` → becomes new head.
+
+After reversal:
+
+```
+3 <-> 2 <-> 1 <-> 0 <-> null
+```
+
+---
+
+## 5. Advantages of DLL Reverse
+
+* Simple because both `next` and `prev` pointers exist.
+* Does not require extra memory.
+* Works in **O(n) time**.
+
+---
+
+## 6. Use Cases
+
+* Implementing **undo/redo** features.
+* Navigation systems (e.g., forward/backward in browser history).
+* Reversing playlists or tasks dynamically.
+
+---
+
 ---
