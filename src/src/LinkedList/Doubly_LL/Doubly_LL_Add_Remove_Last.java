@@ -40,8 +40,8 @@ public class Doubly_LL_Add_Remove_Last {
             head=tail=newNode;
             return;
         }
-        newNode.next = tail;
-        tail.prev = newNode;
+        tail.next = newNode;
+        newNode.prev = tail;
         tail = newNode;
 
     }
@@ -58,7 +58,7 @@ public class Doubly_LL_Add_Remove_Last {
 
     //remove fast
 
-    public int removeFirst() {
+    public int removeLast() {
         if(head==null){
             System.out.println("the list is empty");
             return -1;
@@ -78,15 +78,16 @@ public class Doubly_LL_Add_Remove_Last {
 
     public static void main(String[] args) {
         Doubly_LL_Add_Remove_Last dll = new Doubly_LL_Add_Remove_Last();
-        dll.addFirst(3);
-        dll.addFirst(2);
-        dll.addFirst(1);
-        dll.addFirst(0);
+        dll.addLast(3);
+        dll.addLast(2);
+        dll.addLast(1);
+        dll.addLast(0);
         dll.print();
         System.out.println("\nsize="+size);
-        dll.removeFirst();
+        dll.removeLast();
         dll.print();
-        System.out.println("\nsize="+size);dll.removeFirst();
+        System.out.println("\nsize="+size);
+        dll.removeLast();
         dll.print();
         System.out.println("\nsize="+size);
 
