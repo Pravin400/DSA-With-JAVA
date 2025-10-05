@@ -1,4 +1,4 @@
-package Java_Collection_Frameworks.List.LinkedList.MergeSorting;
+package LinkedList.MergeSorting;
 
 public class LL_Merge_Sort {
 
