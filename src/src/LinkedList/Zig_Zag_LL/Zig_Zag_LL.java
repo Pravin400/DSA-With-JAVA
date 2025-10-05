@@ -1,4 +1,4 @@
-package Java_Collection_Frameworks.List.LinkedList.Zig_Zag_LL;
+package LinkedList.Zig_Zag_LL;
 
 public class Zig_Zag_LL {
 
